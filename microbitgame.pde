@@ -1,6 +1,6 @@
 import processing.serial.*;
 
-Serial arduinoPort;
+Serial mbitPort;
 
 final int COLUMNS=12;
 final int ROWS=6;
@@ -31,8 +31,8 @@ void setup(){
   textFont(loadFont("Verdana-Bold-36.vlw"));
   initGame();
   println(Serial.list());
-  arduinoPort=new Serial(this, "COM4", 115200);
-  arduinoPort.bufferUntil(10);
+  mbitPort=new Serial(this, "COM4", 115200);
+  mbitPort.bufferUntil(10);
 }
 
 void initGame(){
